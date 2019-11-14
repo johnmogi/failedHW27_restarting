@@ -16,3 +16,10 @@ $("body").style = ("background", color)
 
 
 
+
+
+    ---2---
+    sumUp.push(userPrice)
+    sumUp.push(percent)
+    console.log(sumUp)
+     const total = sumUp.join
