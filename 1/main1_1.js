@@ -8,11 +8,18 @@ function getColor() {
     try {
         if(userColor === "red"|| userColor === "green"|| userColor === "blue"||
         userColor === "yellow"|| userColor === "magenta"|| userColor === "cyan"||
-        userColor === "black"|| userColor === "white"|| userColor === "gray");
-        colorBg("userColor");   
+        userColor === "black"|| userColor === "white"|| userColor === "gray"){
+            colorBg("userColor");   
+
+        }
+        else{
+        
+                throw new Error();
+        
+        }
     }
     catch (err) {
-        alert("Error: " + err.message);
+        alert("Error! Please choose one of the given colors");
     }
 }
 
