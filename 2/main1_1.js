@@ -1,16 +1,19 @@
 /// <reference path="jquery-3.4.1.js" />
 
 $(() => {
-    const userColor = prompt("Choose a color: red, green, blue, yellow, magenta, cyan, black, white, gray");
-    getColor()
+    const userPrice = prompt("Ask for quote (vat+17% will be incl.)")
+    getPrice()
     
-function getColor() {
-    try {
-        if(userColor === "red"|| userColor === "green"|| userColor === "blue"||
-        userColor === "yellow"|| userColor === "magenta"|| userColor === "cyan"||
-        userColor === "black"|| userColor === "white"|| userColor === "gray"){
-            colorBg("userColor");   
 
+ 
+
+function getPrice(price) {
+    try {
+        if(userPrice >0 && userPrice != isNaN ){
+            const percent = (+userPrice *0.17)
+         const total = +userPrice + percent
+  
+alert("the final price is : " +total)
         }
         else{
         
@@ -19,13 +22,14 @@ function getColor() {
         }
     }
     catch (err) {
-        alert("Error! Please choose one of the given colors");
+        alert("Somethjing is wrong, please try again")
     }
 }
 
-function colorBg(color){
-    $("body").css("background-color", userColor);
 
+function addVatToPrice() {
+    addVatToPrice(userPrice);   
 }
+
 
     }); //RF
