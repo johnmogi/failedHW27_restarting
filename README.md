@@ -1,3 +1,5 @@
+// todo sum the option to view all 3 options in each excercise
+
 שיעורי בית
 
 1.	צרו פונקציה המקבלת לסוגריים ארגומנט המתאר צבע, וצובעת את הדפדפן בצבע שהתקבל.
