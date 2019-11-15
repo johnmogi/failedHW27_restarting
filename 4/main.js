@@ -1,73 +1,53 @@
 /// <reference path="jquery-3.4.1.js" />
 
 $(() => {
-    // const colorArr = ["red", "green", "blue", "yellow", "magenta", "cyan", "black", "white", "gray" ]
- 
-    const oneNum = parseInt(prompt("give me the first number"));
-    const twoNum = parseInt(prompt("give me the second number"));
-    
-    let numArray = []
-numArray.push(oneNum)
-numArray.push(twoNum)
-console.log(numArray)
 
     function getMiddlePrimaryNumbers(min, max) {
-        numArray = [1,2,3,10]
-        getAverage(numArray);  
-    
-    }
+        if(min>max){
+            alert("Error :  please try again, the smaller is bigger then the bigger number!")
 
-    function getPrice2(nums) {
-      numArray =[]
-        getAverage(numArray);  
-    }
- 
-    function getPrice3(nums) {
-        numArray = null
-          getAverage(numArray);  
-      }
-      function getPrice4(nums) {
-        numArray = "";
-          getAverage(numArray);  
-      }
-    function getAverage(average){
-       
-var total=0;
-for(var i in numArray) { total += numArray[i]; }
+        }
+      
+        let numArray = new Array;
+        numArray= []
+      
+        numArray.push(min)
+        numArray.push(max)
 
 
-try {
-    if(numArray.length>0 || numArray != "" ){
-
-        const avgNum = total / numArray.length
-        alert("Success : the average num is: "+ avgNum)
-return avgNum
-    }
-    else{
-    
-            throw new Error();
-    
+function testPrimary(num){
+    const finalArray = []
+if(num === 1 || num ===2){return}
+else{
+for (let i = 0; i < num; i++) {
+    if((num/ i )%2 === 0){
+        finalArray.push(num)
+        console.log(finalArray)
     }
 }
-catch (err) {
-    alert("Error :  please try again, the numbers array is : " +  numArray)
-    // console.log(numArray)
-}
+return finalArray
 }
 
+    // for (let i = 0; i < max; i++) {
+
+    //     if(min/ i  % i ===1){console.log(min)}
+           
+    //    }
+}
+       testPrimary(min)
+
+    //    testPrimary(max)
+        console.log(numArray)
+    }
 
 
     $("#one").click(() => {
-    getPrice();
+        const oneNum = parseInt(prompt("give me the smaller number"));
+        const twoNum = parseInt(prompt("give me the bigger number"));
+
+        getMiddlePrimaryNumbers(oneNum,twoNum)
 });
-$("#two").click(() => {
-    getPrice2();
-});
-$("#three").click(() => {
-    getPrice3();
-});
-$("#four").click(() => {
-    getPrice4();
-});
+
     }); //RF
     
+ 
