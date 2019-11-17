@@ -2,50 +2,29 @@
 
 $(() => {
 
-    function getMiddlePrimaryNumbers(min, max) {
-        if(min>max){
-            alert("Error :  please try again, the smaller is bigger then the bigger number!")
 
-        }
-      
-        let numArray = new Array;
-        numArray= []
-      
-        numArray.push(min)
-        numArray.push(max)
-
-
-function testPrimary(num){
-    const finalArray = []
-if(num === 1 || num ===2){return}
-else{
-for (let i = 0; i < num; i++) {
-    if((num/ i )%2 === 0){
-        finalArray.push(num)
-        console.log(finalArray)
+function printPrime(min, max){
+let primaryArr = []
+    const minVal = parseInt(Math.sqrt(min));
+    const maxVal = parseInt(Math.sqrt(max));
+for (let i = minVal; i < maxVal; i++) {
+    console.log( -- i)
+    if (i %2 === 0){
+        primaryArr.push(i)
     }
-}
-return finalArray
+    
 }
 
-    // for (let i = 0; i < max; i++) {
+console.log(primaryArr)
 
-    //     if(min/ i  % i ===1){console.log(min)}
-           
-    //    }
 }
-       testPrimary(min)
-
-    //    testPrimary(max)
-        console.log(numArray)
-    }
 
 
     $("#one").click(() => {
         const oneNum = parseInt(prompt("give me the smaller number"));
         const twoNum = parseInt(prompt("give me the bigger number"));
 
-        getMiddlePrimaryNumbers(oneNum,twoNum)
+        printPrime(oneNum,twoNum)
 });
 
     }); //RF
